@@ -1,0 +1,62 @@
+/* Register.css */
+.password-toggle {
+    position: relative;
+  }
+  
+  .password-toggle i {
+    position: absolute;
+    left: 10px; /* يضع الأيقونة في الجانب الأيسر من مربع الكتابة */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* تعديلات إضافية لتحسين تنسيق النموذج */
+  .form-control {
+    padding-right: 2.375rem; /* يضيف مساحة داخلية على الجانب الأيمن لمربع الكتابة */
+  }
+  
+  .form-label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .card {
+    margin-top: 2rem;
+  }
+  
+  /* تنسيق الأزرار والروابط */
+  .btn, .btn:hover, .btn:focus, .btn:active {
+    outline: none;
+    box-shadow: none;
+  }
+  /* Register.css */
+.input-group {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 10px; /* يضع الأيقونة في الجانب الأيسر من مربع الكتابة */
+    top: 40%; /* يبدأ من نصف ارتفاع العنصر الأم */
+    transform: translateY(-50%); /* يعدل الموضع بنصف ارتفاع الأيقونة للتأكد من التمركز */
+    cursor: pointer;
+    height: 20px; /* يضبط ارتفاع الأيقونة للمساعدة في التمركز */
+  }
+  
+  /* تعديلات إضافية لتحسين تنسيق النموذج */
+  .form-control {
+    padding-left: 2.375rem; /* يضيف مساحة داخلية على الجانب الأيسر لمربع الكتابة */
+    height: 38px; /* يضبط ارتفاع مربع الكتابة */
+  }
+  
+  /* تنسيق الأزرار والروابط */
+  .btn, .btn:hover, .btn:focus, .btn:active {
+    outline: none;
+    box-shadow: none;
+  }
+  
