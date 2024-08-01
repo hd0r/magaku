@@ -15,9 +15,10 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: 'https://mangako.netlify.app',
   credentials: true
 }));
+
 
 // إعداد جلسات
 app.use(session({
@@ -30,12 +31,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'postgres',
-  password: '1234',
-  port: 5432,
+  user: 'koyeb-adm',
+  host: 'ep-summer-thunder-a2u8j8ss.eu-central-1.pg.koyeb.app',
+  database: 'koyebdb',
+  password: 'hVa57pEYmJNI',
+  port: 5432
 });
+
 
 // إعداد Nodemailer مع Hotmail
 const transporter = nodemailer.createTransport({

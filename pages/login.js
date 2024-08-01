@@ -15,7 +15,7 @@ function Login() {
     event.preventDefault();
     try {
       // استخدم 'login' بدلاً من 'username' لإرسال الطلب
-      const response = await axios.post('http://localhost:3000/login', { login: username, password });
+      const response = await axios.post('https://mangako.netlify.app/login', { login: username, password });
       console.log('User logged in with ID:', response.data.id);
       router.push('/');
     } catch (error) {

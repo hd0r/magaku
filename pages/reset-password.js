@@ -21,7 +21,7 @@ function ResetPassword() {
 
   const handleSendCode = async () => {
     try {
-      await axios.post('http://localhost:3000/send-verification-code', { email }, { withCredentials: true });
+      await axios.post('https://mangako.netlify.app/send-verification-code', { email }, { withCredentials: true });
       toast.success('تم إرسال رمز التحقق إلى بريدك الإلكتروني');
     } catch (error) {
       toast.error('خطأ في إرسال رمز التحقق');
@@ -40,7 +40,7 @@ function ResetPassword() {
       return;
     }
     try {
-      await axios.post('http://localhost:3000/reset-password', { email, verificationCode, newPassword });
+      await axios.post('https://mangako.netlify.app/reset-password', { email, verificationCode, newPassword });
       toast.success('تم تغيير كلمة المرور بنجاح');
       setTimeout(() => {
         router.push('/'); // إعادة التوجيه بعد 2 ثانية
