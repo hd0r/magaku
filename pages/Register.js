@@ -63,7 +63,7 @@ function Register() {
       return;
     }
     try {
-      const response = await axios.post('https://mangako.netlify.app/register', { username, password, email });
+      const response = await axios.post('https://intensive-natty-haider-ali-d367db1a.koyeb.app/register', { username, password, email });
       console.log('User registered with ID:', response.data.id);
       router.push('/');
     } catch (error) {
@@ -78,7 +78,7 @@ function Register() {
   useEffect(() => {
     const checkEmail = async () => {
       try {
-        const response = await axios.get('https://mangako.netlify.app/check-email', { params: { email } });
+        const response = await axios.get('https://intensive-natty-haider-ali-d367db1a.koyeb.app/check-email', { params: { email } });
         setEmailExists(response.data.exists);
       } catch (error) {
         console.error('Error checking email:', error);
@@ -92,7 +92,7 @@ function Register() {
   useEffect(() => {
     const checkUsername = async () => {
       try {
-        const response = await axios.get('https://mangako.netlify.app/check-username', { params: { username } });
+        const response = await axios.get('https://intensive-natty-haider-ali-d367db1a.koyeb.app/check-username', { params: { username } });
         setUsernameExists(response.data.exists);
       } catch (error) {
         console.error('Error checking username:', error);

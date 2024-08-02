@@ -15,7 +15,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://mangako.netlify.app',
+  origin: 'https://mangako.netlify.app/',
   credentials: true
 }));
 
@@ -40,13 +40,6 @@ const pool = new Pool({
     require: true
   }
 });
-
-//  host="ep-summer-thunder-a2u8j8ss.eu-central-1.pg.koyeb.app",       # عنوان الخادم (الخادم المحلي في هذه الحالة)
-// database="koyebdb",    # اسم قاعدة البيانات
-// user="koyeb-adm",        # اسم المستخدم
-// password="hVa57pEYmJNI",        # كلمة المرور
-// port=5432               # رقم المنفذ
-// إعداد Nodemailer مع Hotmail
 const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
