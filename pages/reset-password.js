@@ -57,7 +57,6 @@ function ResetPassword() {
         <Card className="shadow-lg">
           <Card.Body>
             <div className="text-center mb-4">
-              <img src="/logo.png" alt="Mangaku" style={{ width: "100px" }} />
               <h2 className="mt-3" style={{ direction: 'rtl' }}>استعادة كلمة المرور</h2>
             </div>
             <Form onSubmit={handleResetPassword}>
