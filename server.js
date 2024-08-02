@@ -19,7 +19,6 @@ app.use(cors({
   credentials: true
 }));
 
-
 // إعداد جلسات
 app.use(session({
   secret: 'your_secret_key_2006_mangaku',
@@ -35,10 +34,18 @@ const pool = new Pool({
   host: 'ep-summer-thunder-a2u8j8ss.eu-central-1.pg.koyeb.app',
   database: 'koyebdb',
   password: 'hVa57pEYmJNI',
-  port: 5432
+  port: 5432,
+  ssl: {
+    rejectUnauthorized: false,
+    require: true
+  }
 });
 
-
+//  host="ep-summer-thunder-a2u8j8ss.eu-central-1.pg.koyeb.app",       # عنوان الخادم (الخادم المحلي في هذه الحالة)
+// database="koyebdb",    # اسم قاعدة البيانات
+// user="koyeb-adm",        # اسم المستخدم
+// password="hVa57pEYmJNI",        # كلمة المرور
+// port=5432               # رقم المنفذ
 // إعداد Nodemailer مع Hotmail
 const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
